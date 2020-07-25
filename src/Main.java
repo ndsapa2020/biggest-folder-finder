@@ -32,7 +32,6 @@ public class Main {
                if (curr > 1024) {
                    suff = "TB";
                    curr = curr / 1024;
-
                }
            }
        }
