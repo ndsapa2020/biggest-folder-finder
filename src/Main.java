@@ -5,8 +5,12 @@ public class Main {
         String folderPath = "D://Media";
         File file  = new File(folderPath);
 
+
        long size = getFolderSize(file);
         System.out.println(getHumanReadable(size));
+
+        System.out.println(getFolderSize(file));
+
     }
     public static long getFolderSize (File folder) {
         if (folder.isFile()) {
@@ -18,6 +22,7 @@ public class Main {
             sum += getFolderSize(file);
         }
         return sum;
+
     }
 
     public static String getHumanReadable(long size) {
@@ -37,5 +42,6 @@ public class Main {
        }
 
         return Long.toString(curr) + suff;
+
     }
 }
